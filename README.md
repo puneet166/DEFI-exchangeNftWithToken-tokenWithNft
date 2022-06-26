@@ -20,7 +20,7 @@ transfer(to,amount) - transfer erc20 tokens to's account , amount is how much yo
 
 ### But when we you use this transfer(to,amount) method of A's (ERC20) contract in B's contract by interface, by default msg.sender is smart contract(address(this)). that mean you are sending token from smart contract's account to to's account.
 
-** This is same for ERC721 case.
+* This is same for ERC721 case.
 
 * for transfering token of A's(ERC20) smart contract in B (main) contract. first,you need to approve amount of token for B smart contract in A's contract by calling approve method.
 * first call approve method of A's (ERC20) contract passing B's smart contract address.
@@ -47,6 +47,6 @@ We have 3 contracts-
 * for transfering token or nft. first we need to give approval to the smart contract(address(this)) then token, NFT will transfer by smartcontract.
 
 * for give approval to the smart contract.
- go in erc20.sol call approval method. pass DEFI smartcontract address in "to" field of approval method.
- go in erc721 call setApprovalForAll method. pass DEFI smartcontract address in "operator" field of setApprovalForAll method.
- then DEFI smart contract will trade , exchange token with NFT, NFT with token.
+* go in erc20.sol call approval method. pass DEFI smartcontract address in "to" field of approval method.
+* go in erc721 call setApprovalForAll method. pass DEFI smartcontract address in "operator" field of setApprovalForAll method.
+* then DEFI smart contract will trade , exchange token with NFT, NFT with token.
